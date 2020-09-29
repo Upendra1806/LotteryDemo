@@ -20,7 +20,7 @@ class LotteryListItem extends Component {
                     </Image>
                 </View>
 
-                <View style={{ flex: 1, flexDirection: 'row' }}>
+                <View style={{  flexDirection: 'row' }}>
                     <Image
                         source={this.props.item.imagePath}
                         style={styles.lotteryItemImage}>

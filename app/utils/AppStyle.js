@@ -88,13 +88,16 @@ userIcon: {
   lotteryItemImage:{
     width : 100,
     height : 100,
-    margin : 5,
+    marginStart : 5,
+    marginEnd:5
   },
   
   dashboardItemImage:{
-    width : 150,
-    height : 100,
-    alignSelf: 'center'
+    width : 160,
+    height : 190,
+    alignContent:"center",
+    justifyContent:"center",
+    margin:5
   },
   lotteryItemTitle:{
      color: 'black',

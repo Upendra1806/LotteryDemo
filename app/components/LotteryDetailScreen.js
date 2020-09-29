@@ -4,7 +4,7 @@ import { View, FlatList, bottomDivider, ListItem, Image, Text, StyleSheet, Image
 
 import { styles } from '../utils/AppStyle'
 import lotteryListData from '../utils/LotteryListItem'
-import { BACK_ARROW_PNG, BUTTON_SCAN, BUTTON_SHARE, RECTANGLE_PNG, RIGHT_ARROW, SEARCH_ICON, USER_ICON } from '../assets'
+import { BACK_ARROW_PNG, BUTTON_SCAN, BUTTON_SHARE, LOTTERY, RECTANGLE_PNG, RIGHT_ARROW, SEARCH_ICON, USER_ICON } from '../assets'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { Button } from 'react-native-paper'
 
@@ -81,6 +81,7 @@ class LotteryDetailScreen extends Component {
                     <Image source={SEARCH_ICON} style={styles.userIcon}></Image>
                     <Image source={USER_ICON} style={styles.userIcon}></Image>
                 </View>
+                 <Image source = {LOTTERY} style = {{width:'95%',margin:10}}></Image>
                 <View style={styles.container}>
 
                     <View style={styles.listContainer}>
