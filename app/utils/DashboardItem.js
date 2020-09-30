@@ -1,9 +1,9 @@
-import {LOTTERY_A_PATH,LOTTERY_B_PATH,LOTTERY_C_PATH, LOTTERY_ITEM, LOTTERY_S} from '../assets'
+import { LOTTERY_ITEM_A, LOTTERY_ITEM_B} from '../assets'
 
 var dashboardItems = [
     {
         id : 1234,
-        imagePath : LOTTERY_ITEM,
+        imagePath : LOTTERY_ITEM_A,
         imageUrl : "URL",
         title : "MegaPlex 3X",
         subTitle: "Sun, Sept 27", 
@@ -13,7 +13,7 @@ var dashboardItems = [
     },
     {
         id : 1235,
-        imagePath : LOTTERY_S,
+        imagePath : LOTTERY_ITEM_B,
         imageUrl : "URL",
         title : "MegaPlex 3X",
         subTitle: "Sun, Sept 27", 
@@ -22,7 +22,7 @@ var dashboardItems = [
     },
     {
         id : 1236,
-        imagePath : LOTTERY_ITEM,
+        imagePath : LOTTERY_ITEM_A,
         imageUrl : "URL",
         title : "MegaPlex 3X",
         subTitle: "Sun, Sept 27", 
@@ -31,7 +31,7 @@ var dashboardItems = [
     },
     {
         id : 1237,
-        imagePath : LOTTERY_S,
+        imagePath : LOTTERY_ITEM_B,
         imageUrl : "URL",
         title : "MegaPlex 3X",
         subTitle: "Sun, Sept 27", 
@@ -40,7 +40,7 @@ var dashboardItems = [
     },
     {
         id : 1238,
-        imagePath : LOTTERY_ITEM,
+        imagePath : LOTTERY_ITEM_A,
         imageUrl : "URL",
         title : "MegaPlex 3X",
         subTitle: "Sun, Sept 27", 
@@ -49,7 +49,7 @@ var dashboardItems = [
     },
     {
         id : 1239,
-        imagePath : LOTTERY_S,
+        imagePath : LOTTERY_ITEM_B,
         imageUrl : "URL",
         title : "MegaPlex 3X",
         subTitle: "Sun, Sept 27", 

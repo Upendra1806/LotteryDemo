@@ -67,6 +67,20 @@ class LotteryListItem extends Component {
 }
 
 
+class LotteryListItem2 extends Component {
+
+    render() {
+        return (
+            <View style ={{backgroundColor: "#ffffff",margin: 5}}>
+                          <Image
+                        source={this.props.item.imageUrl}>
+                    </Image>
+            </View>)
+    }
+}
+
+
+
 class LotteryList extends Component {
     static navigationOptions = {
         title: "LotteryList",
@@ -90,9 +104,9 @@ class LotteryList extends Component {
                             renderItem={({ item, index }) => {
                                 return (
                                     <TouchableOpacity onPress={() => this.props.navigation.navigate('LotteryDetailScreen')}>
-                                        <LotteryListItem
+                                        <LotteryListItem2
                                             item={item} index={index}>
-                                        </LotteryListItem>
+                                        </LotteryListItem2>
                                     </TouchableOpacity>
                                 )
 

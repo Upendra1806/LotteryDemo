@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Dashboard from './DashboardScreen';
 import LotteryList from './LotteryList';
 import LotteryDetailScreen from './LotteryDetailScreen';
+import Splash from './SplashScreen';
 
 
 const Stack = createStackNavigator();
@@ -11,9 +12,14 @@ const Stack = createStackNavigator();
 function NavStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Dashboard"
+      initialRouteName="Splash"
       options={{ headerShown: false }}
     >
+      <Stack.Screen
+        name="Splash"
+        component={Splash}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="Dashboard"
         component={Dashboard}

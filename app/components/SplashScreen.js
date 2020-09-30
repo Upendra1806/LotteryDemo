@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Image } from "react-native";
-import {PAYODA_JPG} from '../assets'
+import {PAYODA_JPG, SPLASH_IMAGE} from '../assets'
 
 
 var Timer = null
@@ -21,8 +21,8 @@ const API_PARAMETER = 'apiParameter';
 
     render() {
         return (
-            <View>
-                <Image  source={PAYODA_JPG} />
+            <View style={{flex:1,justifyContent:"center",alignContent:"center",backgroundColor:'#ffffff'}}>
+                <Image  source={SPLASH_IMAGE} style = {{alignSelf:"center"}} />
             </View>
         );
     }

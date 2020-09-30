@@ -86,8 +86,8 @@ userIcon: {
 
   },
   lotteryItemImage:{
-    width : 100,
-    height : 100,
+    width : 150,
+    height : 150,
     marginStart : 5,
     marginEnd:5
   },
@@ -133,7 +133,7 @@ userIcon: {
   },
   right_arrow:{
     flex : 1,
-    top :'16%',
+    top :'17%',
     marginRight: 10,
     flexDirection : "row",
     justifyContent: "flex-end"

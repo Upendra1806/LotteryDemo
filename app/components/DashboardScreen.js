@@ -35,7 +35,6 @@ class Dashboard extends Component {
   render() {
     return (
       <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'flex-start', alignContent: 'flex-start' }}>
-        <ImageBackground source = {DASHBOARD_PNG} style ={{width:'100%',height:330}}>
 
         <View style={{ flexDirection: 'row', margin: 5 }}>
           <View style={{ flex: 1, flexDirection: 'column' }}>
@@ -50,7 +49,8 @@ class Dashboard extends Component {
             source={REBACCA_ICON}>
           </Image>
         </View>
-        </ImageBackground>
+
+        <Image  source = {DASHBOARD_PNG} style = {{margin:10}}></Image>
 
         <View style={{
           flexDirection: "row", justifyContent: 'space-between', marginTop: 5, marginStart: 10
