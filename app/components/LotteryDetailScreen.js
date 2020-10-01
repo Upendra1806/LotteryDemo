@@ -67,6 +67,10 @@ class LotteryListItem extends Component {
 }
 
 
+const  url = "https://www.valottery.com/resulttable.xml"
+var XMLParser = require('react-xml-parser');
+
+
 class LotteryDetailScreen extends Component {
     static navigationOptions = {
         title: "LotteryDetailScreen",
@@ -108,6 +112,20 @@ class LotteryDetailScreen extends Component {
 
         );
     }
+
+
+    componentDidMount(){
+        this.getResponse(url)
+    }
+
+    async getResponse(url) {
+        return fetch(url)
+        .then(response => response.text())
+        .then(xmlString => console.log( "XMLDATA" +xmlString))
+        .then(data => console.log(data))
+      }
+
+
 
 }
 

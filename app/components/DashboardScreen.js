@@ -50,7 +50,7 @@ class Dashboard extends Component {
           </Image>
         </View>
 
-        <Image source={DASHBOARD_PNG} style={{ margin: 10, alignSelf: "center" }}></Image>
+        <Image source={DASHBOARD_PNG} style={{ margin: 10, alignSelf: "center", width :"98%" }}></Image>
 
         <View style={{
           flexDirection: "row", justifyContent: 'space-between', marginTop: 5, marginStart: 10
@@ -87,14 +87,12 @@ class DashboardListItem extends Component {
   render() {
     return (
       <View>
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }} >
+        <View style={{ flex: 1, width:"98%" }} >
           <Image
             source={this.props.item.imagePath}
             style={styles.dashboardItemImage}>
           </Image>
-
         </View>
-
       </View >)
   }
 }

@@ -145,7 +145,7 @@ list_border: {
   flexDirection: 'column',
 },
 divider:{
-  width:'85%',
+  width:'90%',
   borderBottomColor: 'grey',
   borderBottomWidth: .5,
   marginLeft: 1,
