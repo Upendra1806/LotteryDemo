@@ -6,6 +6,7 @@ import LotteryList from './LotteryList';
 import LotteryDetailScreen from './LotteryDetailScreen';
 import Splash from './SplashScreen';
 import Home from './HomeScreen'
+import DefaultScreen from './DefaultScreen';
 
 
 const Stack = createStackNavigator();
@@ -41,6 +42,11 @@ function NavStack() {
       <Stack.Screen
         name="LotteryDetailScreen"
         component={LotteryDetailScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="DefaultScreen"
+        component={DefaultScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

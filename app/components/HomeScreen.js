@@ -18,7 +18,9 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Splash from './SplashScreen';
 import Dashboard from './DashboardScreen';
 import LotteryList from './LotteryList';
-import { Image } from 'react-native'
+import { Image,StatusBar } from 'react-native'
+import { ColorAndroid } from 'react-native/Libraries/StyleSheet/PlatformColorValueTypesAndroid';
+import DefaultScreen from './DefaultScreen';
 const Tab = createMaterialBottomTabNavigator();
 
 class Home extends Component {
@@ -32,9 +34,8 @@ class Home extends Component {
         initialRouteName="Dashboard"
         activeColor="#00691e"
         inactiveColor="#ffffff"
-        style={{ backgroundColor:'#ffffff' }}  
+        barStyle={{backgroundColor:'#ffffff'}}
       >
-
         <Tab.Screen
           name="Dashboard"
           component={Dashboard}
@@ -55,7 +56,7 @@ class Home extends Component {
         />
         <Tab.Screen
           name="Promotion"
-          component={Dashboard}
+          component={DefaultScreen}
           options={{
             tabBarIcon: ({ focused, horizontal, tintColor }) => {
               const image = focused
@@ -72,7 +73,7 @@ class Home extends Component {
         />
         <Tab.Screen
           name="Check"
-          component={Dashboard}
+          component={DefaultScreen}
           options={{
             tabBarLabel: 'Check',
             tabBarIcon: ({ focused, horizontal, tintColor }) => {
@@ -90,7 +91,7 @@ class Home extends Component {
         />
         <Tab.Screen
           name="Winning"
-          component={Dashboard}
+          component={LotteryList}
           options={{
             tabBarLabel: 'Winning',
             tabBarIcon: ({ focused, horizontal, tintColor }) => {
@@ -108,7 +109,7 @@ class Home extends Component {
         />
         <Tab.Screen
           name="Location"
-          component={Dashboard}
+          component={DefaultScreen}
           options={{
             tabBarLabel: 'Location',
             tabBarIcon: ({ focused, horizontal, tintColor }) => {

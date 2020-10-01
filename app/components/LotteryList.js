@@ -73,7 +73,7 @@ class LotteryListItem2 extends Component {
         return (
             <View style ={{margin: 5,flexDirection: "column"}}>
                           <Image
-                        source={this.props.item.imageUrl}  style = {{flex:1,width:'100%',margin:5}}>
+                        source={this.props.item.imageUrl}  style = {{flex:1,width:"100%",margin:5}}>
                     </Image>
             </View>)
     }
