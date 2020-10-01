@@ -5,6 +5,7 @@ import Dashboard from './DashboardScreen';
 import LotteryList from './LotteryList';
 import LotteryDetailScreen from './LotteryDetailScreen';
 import Splash from './SplashScreen';
+import Home from './HomeScreen'
 
 
 const Stack = createStackNavigator();
@@ -15,9 +16,16 @@ function NavStack() {
       initialRouteName="Splash"
       options={{ headerShown: false }}
     >
+     
       <Stack.Screen
         name="Splash"
         component={Splash}
+        options={{ headerShown: false }}
+      />
+
+<Stack.Screen
+        name="Home"
+        component={Home}
         options={{ headerShown: false }}
       />
       <Stack.Screen

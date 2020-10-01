@@ -12,14 +12,8 @@ class LotteryListItem extends Component {
 
     render() {
         return (
-            <View style = {{backgroundColor: "#ffffff",margin: 5}}>
-                <View
-                    style={styles.right_arrow}
-                >
-                    <Image
-                        source={RIGHT_ARROW}>
-                    </Image>
-                </View>
+            <View style={{ backgroundColor: "#ffffff", margin: 5 }}>
+
 
                 <View style={{ flex: 1, flexDirection: 'row', margin: 5 }}>
 
@@ -27,7 +21,16 @@ class LotteryListItem extends Component {
                         <Text style={styles.lotteryItemTitle}>
                             {this.props.item.title}
                         </Text>
-                        <View style={styles.divider}></View>
+                        <View style={{ flexDirection: 'row',justifyContent:"center",marginLeft:5,marginRight:5 }}>
+                            <View style={styles.divider} >
+                            </View>
+                            <View
+                                style={{marginLeft:5,marginRight:5,alignSelf:"flex-end"}}>
+                                <Image
+                                    source={RIGHT_ARROW}>
+                                </Image>
+                            </View>
+                        </View>
                         <View style={{ flex: 1, flexDirection: 'row' }} >
                             <Text style={styles.lotteryItemSubtitle}>
                                 {this.props.item.subTitle}
@@ -72,8 +75,10 @@ class LotteryDetailScreen extends Component {
     render() {
         return (
             <View style={{ flex: 1, flexDirection: "column" }}>
-                <View style={{ flexDirection: "row", height: 60, 
-                justifyContent: "space-between" ,marginTop: 10}}>
+                <View style={{
+                    flexDirection: "row", height: 60,
+                    justifyContent: "space-between", marginTop: 10
+                }}>
                     <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
                         <Image source={BACK_ARROW_PNG} style={styles.backIcon}></Image>
                     </TouchableOpacity>
@@ -81,7 +86,7 @@ class LotteryDetailScreen extends Component {
                     <Image source={SEARCH_ICON} style={styles.userIcon}></Image>
                     <Image source={USER_ICON} style={styles.userIcon}></Image>
                 </View>
-                 <Image source = {LOTTERY} style = {{width:'95%',margin:10}}></Image>
+                <Image source={LOTTERY} style={{ width: '95%', margin: 10 }}></Image>
                 <View style={styles.container}>
 
                     <View style={styles.listContainer}>
@@ -96,7 +101,7 @@ class LotteryDetailScreen extends Component {
                         />
                     </View>
                 </View>
-                <Image source = {BUTTON_SHARE} style = {{alignSelf:'flex-end',margin:10,position:"absolute",top: '80%'}}>
+                <Image source={BUTTON_SHARE} style={{ alignSelf: 'flex-end', margin: 10, position: "absolute", top: '80%' }}>
                 </Image>
 
             </View>

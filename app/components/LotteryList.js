@@ -71,9 +71,9 @@ class LotteryListItem2 extends Component {
 
     render() {
         return (
-            <View style ={{backgroundColor: "#ffffff",margin: 5}}>
+            <View style ={{margin: 5,flexDirection: "column"}}>
                           <Image
-                        source={this.props.item.imageUrl}>
+                        source={this.props.item.imageUrl}  style = {{flex:1,width:'100%',margin:5}}>
                     </Image>
             </View>)
     }

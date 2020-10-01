@@ -34,7 +34,7 @@ userIcon: {
   listContainer: {
       flex: 1,
       backgroundColor: "#e5e5e5",
-      marginBottom:50,
+      marginBottom:5,
   },
   listItemContainer: {
     flex: 1,
@@ -145,10 +145,11 @@ list_border: {
   flexDirection: 'column',
 },
 divider:{
+  width:'85%',
   borderBottomColor: 'grey',
   borderBottomWidth: .5,
-  marginLeft: 5,
-  marginRight: 35,
+  marginLeft: 1,
+  marginRight: 5,
   marginBottom: 10
 },
 

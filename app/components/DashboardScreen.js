@@ -34,14 +34,14 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'flex-start', alignContent: 'flex-start' }}>
+      <View style={{ flex: 1, flexDirection: 'column', alignContent: 'center' }}>
 
         <View style={{ flexDirection: 'row', margin: 5 }}>
           <View style={{ flex: 1, flexDirection: 'column' }}>
-            <Text style={{fontSize:15,marginStart:10,marginTop:5}}>
+            <Text style={{ fontSize: 15, marginStart: 10, marginTop: 5 }}>
               Hi Rebacca
           </Text>
-            <Text style={{fontSize:20,fontWeight:'bold',marginStart:10,marginTop:5}}>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', marginStart: 10, marginTop: 5 }}>
               Welcome back,
             </Text>
           </View>
@@ -50,16 +50,16 @@ class Dashboard extends Component {
           </Image>
         </View>
 
-        <Image  source = {DASHBOARD_PNG} style = {{margin:10}}></Image>
+        <Image source={DASHBOARD_PNG} style={{ margin: 10, alignSelf: "center" }}></Image>
 
         <View style={{
           flexDirection: "row", justifyContent: 'space-between', marginTop: 5, marginStart: 10
           , marginEnd: 10
         }}>
-          <Text style = {{fontSize:20,fontWeight:'bold',alignSelf:'center'}}>Scratch Cards</Text>
-          <Text style = {{fontSize:15,color:'green',alignSelf:'center'}}>View All</Text>
+          <Text style={{ fontSize: 20, fontWeight: 'bold', alignSelf: 'center' }}>Scratch Cards</Text>
+          <Text style={{ fontSize: 15, color: 'green', alignSelf: 'center' }}>View All</Text>
         </View>
-        <View style={{ marginTop:10,justifyContent:"center",alignItems:"center" }}>
+        <View style={{ flex:1,marginTop: 10, justifyContent: "center", alignItems: "center" }}>
           <FlatList
             data={dashboardItems}
             renderItem={({ item, index }) => {
@@ -87,7 +87,7 @@ class DashboardListItem extends Component {
   render() {
     return (
       <View>
-        <View style={{ flex: 1,justifyContent:"center",alignItems:"center" }} >
+        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }} >
           <Image
             source={this.props.item.imagePath}
             style={styles.dashboardItemImage}>
