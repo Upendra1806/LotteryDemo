@@ -86,9 +86,8 @@ userIcon: {
 
   },
   lotteryItemImage:{
-    width : 150,
-    height : 150,
-    marginStart : 5,
+    width : '30%',
+    height : '100%',
     marginEnd:5
   },
   

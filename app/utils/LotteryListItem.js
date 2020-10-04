@@ -1,10 +1,11 @@
 
-import {LIST_ITEM_A, LIST_ITEM_B, LIST_ITEM_C, LIST_ITEM_D, LOTTERY_A_PATH,LOTTERY_B_PATH, LOTTERY_ITEM_A, LOTTERY_ITEM_B} from '../assets'
+import {DECADE_OF_DOLLARS, LIST_ITEM_A, LIST_ITEM_B, LIST_ITEM_C, LIST_ITEM_D, 
+    LOTTERY_A_PATH,LOTTERY_B_PATH, LOTTERY_ITEM_A, LOTTERY_ITEM_B} from '../assets'
 
 var lotteryListData = [
     {
         id : 1234,
-        imagePath : LOTTERY_A_PATH,
+        imagePath : DECADE_OF_DOLLARS,
         imageUrl : LIST_ITEM_A,
         title : "MegaPlex 3X",
         subTitle: "Sun, Sept 27", 
@@ -16,7 +17,7 @@ var lotteryListData = [
     },
     {
         id : 1235,
-        imagePath : LOTTERY_B_PATH,
+        imagePath : DECADE_OF_DOLLARS,
         imageUrl : LIST_ITEM_B,
         title : "MegaPlex 3X",
         subTitle: "Sun, Sept 27", 
@@ -28,7 +29,7 @@ var lotteryListData = [
     },
     {
         id : 1236,
-        imagePath : LOTTERY_A_PATH,
+        imagePath : DECADE_OF_DOLLARS,
         imageUrl : LIST_ITEM_C,
         title : "MegaPlex 3X",
         subTitle: "Sun, Sept 27", 
@@ -40,7 +41,7 @@ var lotteryListData = [
     },
     {
         id : 1237,
-        imagePath : LOTTERY_A_PATH,
+        imagePath : DECADE_OF_DOLLARS,
         imageUrl : LIST_ITEM_D,
         title : "MegaPlex 3X",
         subTitle: "Sun, Sept 27", 
