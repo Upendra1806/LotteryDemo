@@ -100,7 +100,8 @@ userIcon: {
   },
   lotteryItemTitle:{
      color: 'black',
-     fontSize : 15,
+     fontSize : 13,
+     fontWeight: 'bold',
      padding: 10,
 
   },
@@ -120,7 +121,11 @@ userIcon: {
   lotteryItemSubtitle:{
     color: 'black',
     fontSize : 10,
-    padding: 10,
+    paddingTop: 10,
+    paddingBottom:10,
+    paddingStart:5,
+    paddingEnd:3
+
   },
 
   bottomView:{

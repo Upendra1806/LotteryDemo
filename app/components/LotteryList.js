@@ -5,7 +5,7 @@ import { View, FlatList, bottomDivider, ListItem, Image, Text, StyleSheet, Image
 import { styles } from '../utils/AppStyle'
 import lotteryListData from '../utils/LotteryListItem'
 import children from '../utils/item'
-import { BACK_ARROW_PNG, RECTANGLE_PNG, RIGHT_ARROW, USER_ICON, BUTTON_SCAN, DECADE_OF_DOLLARS, BANK_A_MILLION, POWER_BALL, CASH_FOR_LIFE, SUN_ICON, MOON_ICON } from '../assets'
+import { BACK_ARROW_PNG, RECTANGLE_PNG, RIGHT_ARROW, USER_ICON, BUTTON_SCAN, DECADE_OF_DOLLARS, BANK_A_MILLION, POWER_BALL, CASH_FOR_LIFE, SUN_ICON, MOON_ICON, PICK_FOUR, CASH_FIVE, MEGA_MILLION, PICK_THREE } from '../assets'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 class LotteryListItem extends Component {
@@ -18,19 +18,19 @@ class LotteryListItem extends Component {
         switch (param) {
 
             case 'pick3':
-                image = DECADE_OF_DOLLARS
+                image = PICK_THREE
                 break;
 
             case 'pick4':
-                image = DECADE_OF_DOLLARS
+                image = PICK_FOUR
                 break;
 
             case 'cash5':
-                image = DECADE_OF_DOLLARS
+                image = CASH_FIVE
                 break;
 
             case 'megaMillions':
-                DECADE_OF_DOLLARS
+                image = MEGA_MILLION
                 break;
 
             case 'powerBall':
@@ -42,7 +42,7 @@ class LotteryListItem extends Component {
                 break;
 
             case 'moneyBall':
-                image = DECADE_OF_DOLLARS
+                image = MEGA_MILLION
                 break;
 
             case 'decadesofDollars':
@@ -128,6 +128,7 @@ class LotteryListItem extends Component {
                                     style={styles.lottery_number}>
                                     {this.props.item.attributes.N3}</Text>
                             </ImageBackground>
+
                             <ImageBackground source={RECTANGLE_PNG}
                                 style={styles.rectangle_box}>
                                 <Text
@@ -169,12 +170,15 @@ class LotteryListItem extends Component {
                                     style={styles.lottery_number}>
                                     {this.props.item.children[0].attributes.N3}</Text>
                             </ImageBackground>
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.children[0].attributes.N4}</Text>
-                            </ImageBackground>
+                            {this.props.item.children[0].attributes.N4 != null ?
+
+                                <ImageBackground source={RECTANGLE_PNG}
+                                    style={styles.rectangle_box}>
+                                    <Text
+                                        style={styles.lottery_number}>
+                                        {this.props.item.children[0].attributes.N4}</Text>
+                                </ImageBackground> : null
+                            }
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: "center", marginLeft: 5, marginRight: 5 }}>
                             <View style={styles.divider} >
@@ -186,7 +190,7 @@ class LotteryListItem extends Component {
                                 </Image>
                             </View>
                         </View>
-                        <View style={{ flex: 1, flexDirection: 'row',marginStart:5 }} >
+                        <View style={{ flex: 1, flexDirection: 'row', marginStart: 5 }} >
                             <Image style={{ marginTop: 10 }} source={this.getTimeIcon(this.props.item.children[1].attributes.drawtime)}></Image>
 
                             <Text style={styles.lotteryItemSubtitle}>
@@ -210,12 +214,15 @@ class LotteryListItem extends Component {
                                     style={styles.lottery_number}>
                                     {this.props.item.children[0].attributes.N3}</Text>
                             </ImageBackground>
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.children[0].attributes.N4}</Text>
-                            </ImageBackground>
+                            {this.props.item.children[0].attributes.N4 != null ?
+
+                                <ImageBackground source={RECTANGLE_PNG}
+                                    style={styles.rectangle_box}>
+                                    <Text
+                                        style={styles.lottery_number}>
+                                        {this.props.item.children[0].attributes.N4}</Text>
+                                </ImageBackground> : null
+                            }
                         </View>
                     </View>
 

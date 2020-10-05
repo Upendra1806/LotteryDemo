@@ -1,3 +1,5 @@
+import { exp } from 'react-native/Libraries/Animated/src/Easing';
+
 export const PAYODA_JPG = require('./payoda_icon.jpg');
 export const HOME_SVG = require('./home.svg');
 export const SAMPLE_SVG = require('./sample.svg');
@@ -43,3 +45,7 @@ export const POWER_BALL = require('./list_icon_three.png')
 export const CASH_FOR_LIFE = require('./list_icon_four.png')
 export const SUN_ICON = require('./sun_icon.png')
 export const MOON_ICON = require('./moon_icon.png')
+export const MEGA_MILLION = require('./list_icon_six.png')
+export const CASH_FIVE = require('./list_icon_five.png')
+export const PICK_THREE = require('./list_icon_eight.png')
+export const PICK_FOUR = require('./list_icon_nine.png')
