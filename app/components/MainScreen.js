@@ -7,6 +7,7 @@ import LotteryDetailScreen from './LotteryDetailScreen';
 import Splash from './SplashScreen';
 import Home from './HomeScreen'
 import DefaultScreen from './DefaultScreen';
+import SampleViewPager from './SampleViewPager';
 
 
 const Stack = createStackNavigator();
@@ -17,14 +18,14 @@ function NavStack() {
       initialRouteName="Splash"
       options={{ headerShown: false }}
     >
-     
+
       <Stack.Screen
         name="Splash"
         component={Splash}
         options={{ headerShown: false }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="Home"
         component={Home}
         options={{ headerShown: false }}
@@ -47,6 +48,12 @@ function NavStack() {
       <Stack.Screen
         name="DefaultScreen"
         component={DefaultScreen}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="SampleViewPager"
+        component={SampleViewPager}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

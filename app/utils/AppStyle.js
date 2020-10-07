@@ -163,5 +163,8 @@ export const styles = StyleSheet.create({
     top: '85%',
     left: '80%'
   },
+  viewPager: {
+    flex: 1,
+},
 
 });

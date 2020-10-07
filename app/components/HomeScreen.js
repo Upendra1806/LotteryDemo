@@ -21,6 +21,7 @@ import LotteryList from './LotteryList';
 import { Image,StatusBar } from 'react-native'
 import { ColorAndroid } from 'react-native/Libraries/StyleSheet/PlatformColorValueTypesAndroid';
 import DefaultScreen from './DefaultScreen';
+import SampleViewPager from './SampleViewPager';
 const Tab = createMaterialBottomTabNavigator();
 
 class Home extends Component {
