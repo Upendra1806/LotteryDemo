@@ -48,14 +48,14 @@ class Home extends Component {
               return (
                 <Image
                   fadeDuration={0}
-                  style={{ width: 22, height: 22 }}
+                  style={{ width: 24, height: 24 }}
                   source={image} />
               )
             }
           }}
         />
         <Tab.Screen
-          name="Promotion"
+          name="Promotions"
           component={DefaultScreen}
           options={{
             tabBarIcon: ({ focused, horizontal, tintColor }) => {
@@ -65,7 +65,7 @@ class Home extends Component {
               return (
                 <Image
                   fadeDuration={0}
-                  style={{ width: 22, height: 22 }}
+                  style={{ width: 24, height: 24 }}
                   source={image} />
               )
             }
@@ -83,17 +83,17 @@ class Home extends Component {
               return (
                 <Image
                   fadeDuration={0}
-                  style={{ width: 22, height: 22 }}
+                  style={{ width: 24, height: 24 }}
                   source={image} />
               )
             }
           }}
         />
         <Tab.Screen
-          name="Winning"
+          name="Winnings"
           component={LotteryList}
           options={{
-            tabBarLabel: 'Winning',
+            tabBarLabel: 'Winnings',
             tabBarIcon: ({ focused, horizontal, tintColor }) => {
               const image = focused
                 ? IC_TROPHY_F
@@ -101,17 +101,17 @@ class Home extends Component {
               return (
                 <Image
                   fadeDuration={0}
-                  style={{ width: 22, height: 22 }}
+                  style={{ width: 24, height: 24 }}
                   source={image} />
               )
             }
           }}
         />
         <Tab.Screen
-          name="Location"
+          name="Locator"
           component={DefaultScreen}
           options={{
-            tabBarLabel: 'Location',
+            tabBarLabel: 'Locator',
             tabBarIcon: ({ focused, horizontal, tintColor }) => {
               const image = focused
                 ? IC_LOCATOR_F
@@ -119,7 +119,7 @@ class Home extends Component {
               return (
                 <Image
                   fadeDuration={0}
-                  style={{ width: 22, height: 22 }}
+                  style={{ width: 22, height: 26 }}
                   source={image} />
               )
             }

@@ -76,12 +76,15 @@ class LotteryDetailScreen extends Component {
         return (
             <View style={{ flex: 1, flexDirection: "column" }}>
                 <View style={{
-                    flexDirection: "row", height: 60,
-                    justifyContent: "space-between", marginTop: 10
+                    flexDirection: "row", height: 55,
+                    alignContent:"center",
+                    justifyContent: "space-between", margin: 10
                 }}>
+                    <View style = {{alignSelf:"center"}}>
                     <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
                         <Image source={BACK_ARROW_PNG} style={styles.backIcon}></Image>
                     </TouchableOpacity>
+                    </View>
                     <Text style={styles.headerText}>Winning Numbers</Text>
                     <Image source={SEARCH_ICON} style={styles.userIcon}></Image>
                     <Image source={USER_ICON} style={styles.userIcon}></Image>
@@ -101,7 +104,7 @@ class LotteryDetailScreen extends Component {
                         />
                     </View>
                 </View>
-                <Image source={BUTTON_SHARE} style={{ alignSelf: 'flex-end', margin: 10, position: "absolute", top: '80%' }}>
+                <Image source={BUTTON_SHARE} style={styles.floatingButton}>
                 </Image>
 
             </View>

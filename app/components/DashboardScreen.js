@@ -50,11 +50,12 @@ class Dashboard extends Component {
           </Image>
         </View>
 
-        <Image source={DASHBOARD_PNG} style={{ margin: 10, alignSelf: "center", width :"98%" }}></Image>
+        <Image source={DASHBOARD_PNG} style={{ marginStart:15,marginEnd: 15, alignSelf: "center" , borderTopLeftRadius:5,
+             borderTopRightRadius:5}}></Image>
 
         <View style={{
-          flexDirection: "row", justifyContent: 'space-between', marginTop: 5, marginStart: 10
-          , marginEnd: 10
+          flexDirection: "row", justifyContent: 'space-between', marginTop: 5, marginStart: 15
+          , marginEnd: 15
         }}>
           <Text style={{ fontSize: 20, fontWeight: 'bold', alignSelf: 'center' }}>Scratch Cards</Text>
           <Text style={{ fontSize: 15, color: 'green', alignSelf: 'center' }}>View All</Text>
@@ -87,7 +88,7 @@ class DashboardListItem extends Component {
   render() {
     return (
       <View>
-        <View style={{ flex: 1, width:"98%" }} >
+        <View style={{ flex: 1, width:"99%" }} >
           <Image
             source={this.props.item.imagePath}
             style={styles.dashboardItemImage}>

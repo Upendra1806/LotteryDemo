@@ -10,6 +10,68 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 
 class LotteryListItem extends Component {
 
+    LotteryNumber = (props) => {
+        return (
+            props.number != null ?
+                <ImageBackground source={RECTANGLE_PNG}
+                    style={styles.rectangle_box}>
+                    <Text
+                        style={styles.lottery_number}>
+                        {props.number}</Text>
+                </ImageBackground> : null
+
+        );
+    }
+
+
+    getTitleName = (param) => {
+
+        let title = param;
+        switch (param) {
+            case 'pick3':
+                title = "Pick 3"
+                break;
+
+            case 'pick4':
+                title = "Pick 4"
+                break;
+
+            case 'cash5':
+                title = "Cash 5"
+                break;
+
+            case 'megaMillions':
+                title = "Mega Millions"
+                break;
+
+            case 'powerBall':
+                title = "Power Ball"
+                break;
+
+            case 'cash4Life':
+                title = "Cash 4 Life"
+                break;
+
+            case 'moneyBall':
+                title = "Money Ball"
+                break;
+
+            case 'decadesofDollars':
+                title = "Decades of Dollars"
+                break;
+
+            case 'bankAMillion':
+                title = "Bank a Million"
+                break;
+
+            default:
+                title = param
+
+        }
+        return title
+
+    }
+
 
     getImage = (param) => {
 
@@ -87,14 +149,14 @@ class LotteryListItem extends Component {
         console.log("Length " + this.props.item.children.length)
         if (this.props.item.children.length == 0) {
             return (
-                <View style={{ margin: 5, flexDirection: 'row' }}>
+                <View style={{ marginTop: 5,marginBottom:5, flexDirection: 'row' }}>
                     <Image
                         source={this.getImage(this.props.item.name)}
                         style={styles.lotteryItemImage}>
                     </Image>
                     <View style={{ flex: 1, flexDirection: 'column', backgroundColor: "#ffffff", }}>
                         <Text style={styles.lotteryItemTitle}>
-                            {this.props.item.name}
+                            {this.getTitleName(this.props.item.name)}
                         </Text>
                         <View style={{ flexDirection: 'row', justifyContent: "center", marginLeft: 5, marginRight: 5 }}>
                             <View style={styles.divider} >
@@ -106,79 +168,56 @@ class LotteryListItem extends Component {
                                 </Image>
                             </View>
                         </View>
-                        <View style={{ flex: 1, flexDirection: 'row' }} >
+                        <View style={{ flex: 1, flexDirection: 'row', alignContent: "center", justifyContent: "flex-start" }} >
                             <Text style={styles.lotteryItemSubtitle}>
                                 {this.getSubTitleData(this.props.item.attributes.drawdate)}
                             </Text>
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.attributes.N1}</Text>
-                            </ImageBackground>
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.attributes.N2}</Text>
-                            </ImageBackground>
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.attributes.N3}</Text>
-                            </ImageBackground>
+                            <this.LotteryNumber number={this.props.item.attributes.N1}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.attributes.N2}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.attributes.N3}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.attributes.N4}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.attributes.N5}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.attributes.N6}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.attributes.N7}>
+                            </this.LotteryNumber>
 
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.attributes.N4}</Text>
-                            </ImageBackground>
                         </View>
                     </View>
 
                 </View>)
         } else {
             return (
-                <View style={{ margin: 5, flexDirection: 'row' }}>
+                <View style={{ marginTop: 5,marginBottom:5, flexDirection: 'row' }}>
                     <Image
                         source={this.getImage(this.props.item.name)}
                         style={styles.lotteryItemImage}>
                     </Image>
                     <View style={{ flex: 1, flexDirection: 'column', backgroundColor: "#ffffff", }}>
                         <View style={{ flexDirection: 'row', marginLeft: 5, marginRight: 5, alignContent: "center", marginTop: 10 }} >
-                            <Image style={{ marginTop: 10 }} source={this.getTimeIcon(this.props.item.children[0].attributes.drawtime)}></Image>
+                            <Image style={{ alignSelf: "center" }} source={this.getTimeIcon(this.props.item.children[0].attributes.drawtime)}></Image>
                             <Text style={styles.lotteryItemSubtitle}>
                                 {this.getSubTitleData(this.props.item.children[0].attributes.drawdate)}
                             </Text>
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.children[0].attributes.N1}</Text>
-                            </ImageBackground>
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.children[0].attributes.N2}</Text>
-                            </ImageBackground>
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.children[0].attributes.N3}</Text>
-                            </ImageBackground>
-                            {this.props.item.children[0].attributes.N4 != null ?
-
-                                <ImageBackground source={RECTANGLE_PNG}
-                                    style={styles.rectangle_box}>
-                                    <Text
-                                        style={styles.lottery_number}>
-                                        {this.props.item.children[0].attributes.N4}</Text>
-                                </ImageBackground> : null
-                            }
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N1}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N2}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N3}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N4}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N5}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N6}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N7}>
+                            </this.LotteryNumber>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: "center", marginLeft: 5, marginRight: 5 }}>
                             <View style={styles.divider} >
@@ -196,33 +235,20 @@ class LotteryListItem extends Component {
                             <Text style={styles.lotteryItemSubtitle}>
                                 {this.getSubTitleData(this.props.item.children[1].attributes.drawdate)}
                             </Text>
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.children[0].attributes.N1}</Text>
-                            </ImageBackground>
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.children[0].attributes.N2}</Text>
-                            </ImageBackground>
-                            <ImageBackground source={RECTANGLE_PNG}
-                                style={styles.rectangle_box}>
-                                <Text
-                                    style={styles.lottery_number}>
-                                    {this.props.item.children[0].attributes.N3}</Text>
-                            </ImageBackground>
-                            {this.props.item.children[0].attributes.N4 != null ?
-
-                                <ImageBackground source={RECTANGLE_PNG}
-                                    style={styles.rectangle_box}>
-                                    <Text
-                                        style={styles.lottery_number}>
-                                        {this.props.item.children[0].attributes.N4}</Text>
-                                </ImageBackground> : null
-                            }
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N1}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N2}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N3}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N4}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N5}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N6}>
+                            </this.LotteryNumber>
+                            <this.LotteryNumber number={this.props.item.children[0].attributes.N7}>
+                            </this.LotteryNumber>
                         </View>
                     </View>
 
@@ -264,11 +290,12 @@ class LotteryList extends Component {
 
             return (
                 <View style={{ flex: 1, flexDirection: "column" }}>
-                    <View style={{ flexDirection: "row", height: 60, justifyContent: "space-between", marginTop: 10 }}>
-                        <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-                            <Image source={BACK_ARROW_PNG} style={styles.backIcon}
-                            ></Image>
-                        </TouchableOpacity>
+                    <View style={{
+                        flexDirection: "row", height: 55, justifyContent: "space-between", marginTop: 10,
+                         marginLeft: 10,
+                        marginRight: 10,
+                        alignContent:"center"
+                    }}>
                         <Text style={styles.headerText}>Winning Numbers</Text>
                         <Image source={USER_ICON} style={styles.userIcon}></Image>
                     </View>
@@ -290,18 +317,17 @@ class LotteryList extends Component {
                             />
                         </View>
                     </View>
-                    <Image source={BUTTON_SCAN} style={{ alignSelf: 'flex-end', margin: 10, position: "absolute", top: '80%' }}>
+                    <Image source={BUTTON_SCAN} style={styles.floatingButton}>
                     </Image>
                 </View>);
         } else {
 
             return (
                 <View style={{ flex: 1, flexDirection: "column" }}>
-                    <View style={{ flexDirection: "row", height: 60, justifyContent: "space-between", marginTop: 10 }}>
-                        <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-                            <Image source={BACK_ARROW_PNG} style={styles.backIcon}
-                            ></Image>
-                        </TouchableOpacity>
+                    <View style={{
+                        flexDirection: "row", height: 60, justifyContent: "space-between", marginTop: 10, marginLeft: 10,
+                        marginRight: 10
+                    }}>
                         <Text style={styles.headerText}>Winning Numbers</Text>
                         <Image source={USER_ICON} style={styles.userIcon}></Image>
                     </View>
@@ -323,7 +349,7 @@ class LotteryList extends Component {
                             />
                         </View>
                     </View>
-                    <Image source={BUTTON_SCAN} style={{ alignSelf: 'flex-end', margin: 10, position: "absolute", top: '80%' }}>
+                    <Image source={BUTTON_SCAN} style={styles.floatingButton}>
                     </Image>
                 </View>);
         }

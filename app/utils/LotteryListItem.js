@@ -12,7 +12,7 @@ var lotteryListData = [
         lotteryUrl: "Lottery URL",
         number_one: 1,
         number_two: 2,
-        number_three: 3,
+        number_three: 8,
         number_four: 7
     },
     {
@@ -23,9 +23,9 @@ var lotteryListData = [
         subTitle: "Sun, Sept 27", 
         lotteryUrl: "Lottery URL",
         number_one: 1,
-        number_two: 2,
+        number_two: 8,
         number_three: 3,
-        number_four: 7
+        number_four: 5
     },
     {
         id : 1236,
@@ -46,7 +46,7 @@ var lotteryListData = [
         title : "MegaPlex 3X",
         subTitle: "Sun, Sept 27", 
         lotteryUrl: "Lottery URL",
-        number_one: 1,
+        number_one: 9,
         number_two: 2,
         number_three: 3,
         number_four: 7
